@@ -46,9 +46,7 @@ function dotfiles {
   esac
 
   echo STOWING  *
-
-  cd $HOME/.dotfiles
-  stow -S * --dotfiles
+  stow -S $(ls $HOME/.dotfiles)
 
   cd $__orig_dir
 }
