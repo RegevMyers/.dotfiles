@@ -1,5 +1,4 @@
 alias v='nvim'
-alias minsh='PS1="\$ "; clear'
 
 alias ff='fastfetch'
 

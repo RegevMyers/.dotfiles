@@ -1,4 +1,4 @@
-function quite {
+function quiet {
   "$@" &> /dev/null
 }
 
