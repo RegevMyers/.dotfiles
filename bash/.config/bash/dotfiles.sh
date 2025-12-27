@@ -32,10 +32,10 @@ function dotfiles {
       
       echo "SYNCING"
       
-      git add -A
-      git commit -a -m "Sync: $(date)" 
-      git pull --rebase origin main 
-      git push origin main
+      quiet git add -A
+      quiet git commit -a -m "Sync: $(date)" 
+      quiet git pull --rebase origin main 
+      quiet git push origin main
       ;;
 
     *)
