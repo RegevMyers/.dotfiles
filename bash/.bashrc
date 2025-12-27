@@ -118,11 +118,17 @@ fi
 quiet-bg sudo apt update 
 quiet-bg sudo apt autoremove
 
+function __sync_dotfiles {
+  echo "[ @ ] Syncing dotfiles..."
+  if quiet dotfiles sync; then
+    echo "[ + ] Synced"
+  else
+    echo "[ ! ] Failed"	
+  fi
+}
 
 if [ -z "$TMUX" ]; then
-  echo "[ @ ] Syncing dotfiles..."
-  dotfiles sync
-
-  exec tmux new -A -s tmux -n main -c $HOME 'echo; fastfetch; $SHELL'
+  __sync_dotfiles
+  # exec tmux new -A -s tmux -n main -c $HOME 'echo; fastfetch; $SHELL'
 fi
 
