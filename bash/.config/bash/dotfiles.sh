@@ -40,10 +40,11 @@ function dotfiles {
       ;;
       
     *)
-      __usage="Usage: dotfiles command\n\tshow\n\tadd <pkg> <file>"
+      __usage="Usage: dotfiles command\n\n\tshow\n\tadd <pkg> <file>\n\tsync"
       echo -e "$__usage"
       unset __usage
       ;;
+
   esac
 
   cd - &>/dev/null
