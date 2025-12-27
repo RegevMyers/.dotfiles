@@ -129,8 +129,11 @@ function __sync_dotfiles {
   fi
 }
 
-if [ -z "$TMUX" ]; then
+function __init {
   __sync_dotfiles
-  exec tmux new -A -s tmux -n main -c $HOME 'echo; fastfetch; $SHELL'
+}
+
+if [ -z "$TMUX" ]; then
+  __init && exec tmux new -A -s tmux -n main -c $HOME 'echo; fastfetch; $SHELL'
 fi
 
