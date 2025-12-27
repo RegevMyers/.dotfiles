@@ -47,7 +47,7 @@ function dotfiles {
 
   cd $HOME/.dotfiles
   echo "STOWING  $(ls -1 | tr '\n' ' ')"
-  stow -S $(ls -1 | tn '\n' ' ')
+  stow -S $(ls -1 | tr '\n' ' ')
 
   cd $__orig_dir
 }
