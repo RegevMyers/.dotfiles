@@ -37,6 +37,7 @@ function dotfiles {
       git commit -a -m "Sync: $(date)" 
       git pull --rebase origin main 
       git push origin main
+      stow -S * --dotfiles
       ;;
       
     *)
