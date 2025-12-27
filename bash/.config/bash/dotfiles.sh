@@ -1,14 +1,3 @@
-function __fix_dotfile_names {
-  cd $HOME
-  
-  find .dotfiles -path '.dotfiles/.git/*' -prune -o -type f -print | while read -r __file; do
-    __new_name="$(echo $__file | sed -E 's|/\.([^/]*)|/dot-\1|g')"
-    mv "$__file" "$__new_name"
-  done
-  
-  cd - &>/dev/null
-}
-
 function dotfiles {
   cd $HOME
 
@@ -40,6 +29,8 @@ function dotfiles {
     sync)
       cd .dotfiles
       
+      echo "SYNCING"
+      
       git add -A
       git commit -a -m "Sync: $(date)" 
       git pull --rebase origin main 
@@ -55,8 +46,6 @@ function dotfiles {
       ;;
 
   esac
-
-  __fix_dotfile_names
 
   echo STOWING  *
 
