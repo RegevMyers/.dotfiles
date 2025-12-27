@@ -33,10 +33,10 @@ function dotfiles {
     sync)
       cd .dotfiles
       
-      quiet git add -A
-      quiet git commit -a -m "Sync: $(date)" 
-      quiet git pull --rebase origin main 
-      quiet git push origin main
+      git add -A
+      git commit -a -m "Sync: $(date)" 
+      git pull --rebase origin main 
+      git push origin main
       ;;
       
     *)
