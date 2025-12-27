@@ -32,10 +32,6 @@ function dotfiles {
       echo -e "MOVING   $__file  ->  .dotfiles/$__pkg/$__dir"
       mv "$__file" ".dotfiles/$__pkg/$__dir"
 
-      echo -e "STOWING  $__pkg"
-      cd .dotfiles
-      stow $__pkg
-
       unset __pkg
       unset __file
       unset __dir
@@ -48,7 +44,6 @@ function dotfiles {
       git commit -a -m "Sync: $(date)" 
       git pull --rebase origin main 
       git push origin main
-      stow -S * --dotfiles
 
       cd - &> /dev/null
       ;;
@@ -63,5 +58,11 @@ function dotfiles {
 
   __fix_dotfile_names
 
-  cd - &>/dev/null
+  echo STOWING  *
+
+  cd .dotfiles
+  stow -S * --dotfiles
+  cd - &> /dev/null
+
+  cd - &> /dev/null
 }
