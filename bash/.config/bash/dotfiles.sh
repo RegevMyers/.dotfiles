@@ -1,5 +1,5 @@
 function dotfiles {
-  cd $HOME
+  __orig_dir="$PWD"
 
   case "$1" in
     show)
@@ -11,6 +11,7 @@ function dotfiles {
       __file="$3"
       __dir=${__file%/*}
       
+      # TODO: use dirname
       if [ $__dir == $__file ]; then
         __dir=""
       fi
@@ -27,7 +28,7 @@ function dotfiles {
       ;;
       
     sync)
-      cd .dotfiles
+      cd $HOME/.dotfiles
       
       echo "SYNCING"
       
@@ -35,23 +36,19 @@ function dotfiles {
       git commit -a -m "Sync: $(date)" 
       git pull --rebase origin main 
       git push origin main
-
-      cd - &> /dev/null
       ;;
 
     *)
-      __usage="Usage: dotfiles command\n\n\tshow\n\tadd <pkg> <file>\n\tsync"
-      echo -e "$__usage"
-      unset __usage
+      __usage="Usage: dotfiles command\n\nCommads:\n\tshow\n\tadd <pkg> <file>\n\tsync"
+      echo "$__usage"
       ;;
 
   esac
 
   echo STOWING  *
 
-  cd .dotfiles
+  cd $HOME/.dotfiles
   stow -S * --dotfiles
-  cd - &> /dev/null
 
-  cd - &> /dev/null
+  cd $__orig_dir
 }
