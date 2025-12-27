@@ -39,15 +39,15 @@ function dotfiles {
       ;;
 
     *)
-      __usage="Usage: dotfiles command\n\nCommads:\n\tshow\n\tadd <pkg> <file>\n\tsync"
+      __usage="Usage: dotfiles command\n\nCommands:\n\tshow\n\tadd <pkg> <file>\n\tsync"
       echo -e "$__usage"
       ;;
 
   esac
 
   cd $HOME/.dotfiles
-  echo "STOWING  $(ls)"
-  stow -S $(ls)
+  echo "STOWING  $(ls -1 | tr '\n' ' ')"
+  stow -S $(ls -1 | tn '\n' ' ')
 
   cd $__orig_dir
 }
