@@ -1,3 +1,14 @@
+function __fix_dotfile_names {
+  cd $HOME
+  
+  find .dotfiles -path '.dotfiles/.git/*' -prune -o -type f -print | while read -r __file; do
+    __new_name="$(echo $__file | sed -E 's|/\.([^/]*)|/dot-\1|g')"
+    mv "$__file" "$__new_name"
+  done
+  
+  cd - &>/dev/null
+}
+
 function dotfiles {
   cd $HOME
 
@@ -38,8 +49,10 @@ function dotfiles {
       git pull --rebase origin main 
       git push origin main
       stow -S * --dotfiles
+
+      cd - &> /dev/null
       ;;
-      
+
     *)
       __usage="Usage: dotfiles command\n\n\tshow\n\tadd <pkg> <file>\n\tsync"
       echo -e "$__usage"
@@ -47,6 +60,8 @@ function dotfiles {
       ;;
 
   esac
+
+  __fix_dotfile_names
 
   cd - &>/dev/null
 }
