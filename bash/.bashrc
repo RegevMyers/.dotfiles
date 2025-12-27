@@ -120,9 +120,9 @@ quiet-bg sudo apt autoremove
 
 
 if [ -z "$TMUX" ]; then
-  exec tmux new -A -s tmux -n main -c $HOME 'echo; fastfetch; $SHELL'
-else
-  echo "[ . ] Syncing dotfiles..."
+  echo "[ @ ] Syncing dotfiles..."
   dotfiles sync
+
+  exec tmux new -A -s tmux -n main -c $HOME 'echo; fastfetch; $SHELL'
 fi
 
