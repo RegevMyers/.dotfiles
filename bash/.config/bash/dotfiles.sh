@@ -39,7 +39,7 @@ function dotfiles {
       ;;
 
     *)
-      __usage="Usage: dotfiles command\n\nCommands:\n\tshow\n\tadd <pkg> <file>\n\tsync"
+      __usage="Usage:     dotfiles <command>\nCommands:\n\tshow\n\tadd <pkg> <file>\n\tsync"
       echo -e "$__usage"
       return 0
       ;;
