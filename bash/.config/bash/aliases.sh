@@ -21,3 +21,5 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+
+alias agpl="curl https://www.gnu.org/licenses/agpl-3.0.txt -o LICENSE"
