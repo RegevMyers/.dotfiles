@@ -16,10 +16,10 @@ function dotfiles {
         __dir=""
       fi
 
-      echo -e "CREATING .dotfiles/$__pkg/$__dir"
+      echo -e "CREATING | .dotfiles/$__pkg/$__dir"
       mkdir -p ".dotfiles/$__pkg/$__dir"
 
-      echo -e "MOVING   $__file  ->  .dotfiles/$__pkg/$__dir"
+      echo -e "MOVING   | $__file  ->  .dotfiles/$__pkg/$__dir"
       mv "$__file" ".dotfiles/$__pkg/$__dir"
 
       unset __pkg
@@ -41,12 +41,13 @@ function dotfiles {
     *)
       __usage="Usage: dotfiles command\n\nCommands:\n\tshow\n\tadd <pkg> <file>\n\tsync"
       echo -e "$__usage"
+      exit 0
       ;;
 
   esac
 
   cd $HOME/.dotfiles
-  echo "STOWING  $(ls -1 | tr '\n' ' ')"
+  echo "STOWING  | $(ls -1 | tr '\n' ' ')"
   stow -S $(ls -1 | tr '\n' ' ')
 
   cd $__orig_dir
