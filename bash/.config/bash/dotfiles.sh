@@ -1,5 +1,7 @@
 function dotfiles {
   __orig_dir="$PWD"
+  
+  __dotfiles_dir="$HOME/.dotfiles"
 
   case "$1" in
     show)
@@ -16,11 +18,11 @@ function dotfiles {
         __dir=""
       fi
 
-      echo -e "CREATING | .dotfiles/$__pkg/$__dir"
-      mkdir -p ".dotfiles/$__pkg/$__dir"
+      echo -e "CREATING | $__dotfiles_dir/$__pkg/$__dir"
+      mkdir -p "$__dotfiles_dir/$__pkg/$__dir"
 
-      echo -e "MOVING   | $__file  ->  .dotfiles/$__pkg/$__dir"
-      mv "$__file" ".dotfiles/$__pkg/$__dir"
+      echo -e "MOVING   | $__file  ->  $__dotfiles_dir/$__pkg/$__dir"
+      mv "$__file" "$__dotfiles_dir/$__pkg/$__dir"
 
       unset __pkg
       unset __file
@@ -28,9 +30,9 @@ function dotfiles {
       ;;
       
     sync)
-      cd $HOME/.dotfiles
+      cd $__dotfiles_dir 
       
-      echo "SYNCING"
+      echo "SYNCING  | $(git remote get-url origin)"
       
       quiet git add -A
       quiet git commit -a -m "Sync: $(date)" 
@@ -46,9 +48,9 @@ function dotfiles {
 
   esac
 
-  cd $HOME/.dotfiles
-  echo "STOWING  | $(ls -1 | tr '\n' ' ')"
-  stow -S $(ls -1 | tr '\n' ' ')
+  cd $__dotfiles_dir
+  echo "STOWING  | $(ls -d */ | sed 's|/||g' | tr '\n' ' ')"
+  stow -S $(ls -d */ | sed 's|/||g' | tr '\n' ' ')
 
   cd $__orig_dir
 
