@@ -11,13 +11,8 @@ function dotfiles {
     add)
       __pkg="$2"
       __file="$3"
-      __dir=${__file%/*}
+      __dir="$(dirname $__file)"
       
-      # TODO: use dirname
-      if [ $__dir == $__file ]; then
-        __dir=""
-      fi
-
       echo -e "CREATING | $__dotfiles_dir/$__pkg/$__dir"
       mkdir -p "$__dotfiles_dir/$__pkg/$__dir"
 
@@ -48,6 +43,7 @@ function dotfiles {
 
   esac
 
+  # TODO: get rid of the cd
   cd $__dotfiles_dir
   echo "STOWING  | $(ls -d */ | sed 's|/||g' | tr '\n' ' ')"
   stow -S $(ls -d */ | sed 's|/||g' | tr '\n' ' ')
