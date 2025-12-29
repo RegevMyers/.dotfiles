@@ -41,7 +41,7 @@ function dotfiles {
     *)
       __usage="Usage: dotfiles command\n\nCommands:\n\tshow\n\tadd <pkg> <file>\n\tsync"
       echo -e "$__usage"
-      exit 0
+      return 0
       ;;
 
   esac
@@ -51,4 +51,6 @@ function dotfiles {
   stow -S $(ls -1 | tr '\n' ' ')
 
   cd $__orig_dir
+
+  return 0
 }
