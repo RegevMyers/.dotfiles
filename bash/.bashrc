@@ -96,7 +96,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-for f in env aliases quiet xdg dotfiles; do
+for f in env aliases quiet xdg dotfiles utils; do
   _full_path="$XDG_CONFIG_HOME/bash/$f.sh";
   if [ -f "$_full_path" ]; then
     source "$_full_path"
