@@ -28,7 +28,7 @@ function dotfiles {
     sync)
       cd $__dotfiles_dir 
       
-      echo "[@] Syncing with $(git remote get-url origin) (main)"
+      echo "[@] Syncing with '$(git remote get-url origin)'"
       
       quiet git add -A
       quiet git commit -a -m "Sync: $(date)" 
@@ -48,7 +48,7 @@ function dotfiles {
 
   # TODO: get rid of the cd
   cd $__dotfiles_dir
-  echo "[@] Stowing [ $(ls -d */ | sed 's|/||g' | tr '\n' ' ') ]"
+  echo "[@] Stowing [ $(ls -d */ | sed 's|/||g' | tr '\n' ' ')]"
   stow -S $(ls -d */ | sed 's|/||g' | tr '\n' ' ')
 
   cd $__orig_dir
