@@ -34,8 +34,10 @@ function dotfiles {
       quiet git pull --rebase origin main 
       quiet git push origin main
 
-      [ $? -ne 0 ] && echo "[!] Failed"
-      return 1
+      if [ $? -ne 0 ]; then
+        echo "[!] Failed"
+        return 1
+      fi
       ;;
 
     *)
