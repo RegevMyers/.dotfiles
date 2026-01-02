@@ -6,6 +6,7 @@ function dotfiles {
   case "$1" in
     show)
       tree --noreport -a -I .git .dotfiles
+      return 0
       ;;
 
     add)
@@ -13,10 +14,10 @@ function dotfiles {
       __file="$3"
       __dir="$(dirname $__file)"
       
-      echo -e "CREATING | $__dotfiles_dir/$__pkg/$__dir"
+      echo -e "[@] Creating $__dotfiles_dir/$__pkg/$__dir"
       mkdir -p "$__dotfiles_dir/$__pkg/$__dir"
 
-      echo -e "MOVING   | $__file  ->  $__dotfiles_dir/$__pkg/$__dir"
+      echo -e "[@] Moving $__file  ->  $__dotfiles_dir/$__pkg/$__dir"
       mv "$__file" "$__dotfiles_dir/$__pkg/$__dir"
 
       unset __pkg
@@ -27,12 +28,14 @@ function dotfiles {
     sync)
       cd $__dotfiles_dir 
       
-      echo "SYNCING  | $(git remote get-url origin)"
+      echo "[@] Syncing with $(git remote get-url origin) (main)"
       
       quiet git add -A
       quiet git commit -a -m "Sync: $(date)" 
       quiet git pull --rebase origin main 
-      quiet git push origin main  # TODO: print if fail.!
+      quiet git push origin main
+
+      [ $? ] && echo "[!] Failed"
       ;;
 
     *)
@@ -45,7 +48,7 @@ function dotfiles {
 
   # TODO: get rid of the cd
   cd $__dotfiles_dir
-  echo "STOWING  | $(ls -d */ | sed 's|/||g' | tr '\n' ' ')"
+  echo "[@] Stowing [ $(ls -d */ | sed 's|/||g' | tr '\n' ', ') ]"
   stow -S $(ls -d */ | sed 's|/||g' | tr '\n' ' ')
 
   cd $__orig_dir
