@@ -35,7 +35,7 @@ function dotfiles {
       quiet git pull --rebase origin main 
       quiet git push origin main
 
-      [ $? ] && echo "[!] Failed"
+      [ $? -ne 0 ] && echo "[!] Failed"
       ;;
 
     *)
@@ -48,7 +48,7 @@ function dotfiles {
 
   # TODO: get rid of the cd
   cd $__dotfiles_dir
-  echo "[@] Stowing [ $(ls -d */ | sed 's|/||g' | tr '\n' ', ') ]"
+  echo "[@] Stowing [ $(ls -d */ | sed 's|/||g' | tr '\n' ' ') ]"
   stow -S $(ls -d */ | sed 's|/||g' | tr '\n' ' ')
 
   cd $__orig_dir
