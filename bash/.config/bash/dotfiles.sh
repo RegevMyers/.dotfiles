@@ -1,6 +1,5 @@
 function dotfiles {
   __orig_dir="$PWD"
-  
   __dotfiles_dir="$HOME/.dotfiles"
 
   case "$1" in
@@ -36,6 +35,7 @@ function dotfiles {
       quiet git push origin main
 
       [ $? -ne 0 ] && echo "[!] Failed"
+      return 1
       ;;
 
     *)
