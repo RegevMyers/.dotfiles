@@ -32,7 +32,7 @@ function dotfiles {
       quiet git add -A
       quiet git commit -a -m "Sync: $(date)" 
       quiet git pull --rebase origin main 
-      quiet git push origin main
+      quiet git push origin main  # TODO: print if fail.!
       ;;
 
     *)
