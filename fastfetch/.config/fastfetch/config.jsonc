@@ -164,6 +164,10 @@
       "type": "shell",
       "keyIcon": ""
     },
+    {
+      "type": "terminal",
+      "keyIcon": ""
+    },
     /*{
       "type": "display",
       "keyIcon": "󰍹",
@@ -201,10 +205,6 @@
       "type": "cursor",
       "keyIcon": "󰆿"
     },*/
-    {
-      "type": "terminal",
-      "keyIcon": ""
-    },
     /*{
       "type": "terminalfont",
       "keyIcon": ""
