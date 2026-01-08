@@ -123,7 +123,7 @@
       "type": "title",
       "key": " ",
       "keyIcon": "",
-      "fqdn": false,
+      "fqdn": true,
       "color": {
         "user": "",
         "at": "",
@@ -132,7 +132,7 @@
     },
     {
       "type": "separator",
-      "string": " ",
+      "string": "-",
       "outputColor": "",
       "times": 0
     },
@@ -156,7 +156,7 @@
       "type": "packages",
       "keyIcon": "󰏖",
       "disabled": [
-        "winget"
+        //"winget"
       ],
       "combined": false
     },
@@ -164,13 +164,13 @@
       "type": "shell",
       "keyIcon": ""
     },
-    {
+    /*{
       "type": "display",
       "keyIcon": "󰍹",
       "compactType": "none",
       "preciseRefreshRate": false,
       "order": null
-    },
+    },*/
     {
       "type": "de",
       "keyIcon": "",
@@ -181,34 +181,34 @@
       "keyIcon": "",
       "detectPlugin": false
     },
-    {
+    /*{
       "type": "wmtheme",
       "keyIcon": "󰓸"
-    },
-    {
+    },*/
+    /*{
       "type": "theme",
       "keyIcon": "󰉼"
-    },
-    {
+    },*/
+    /*{
       "type": "icons",
       "keyIcon": ""
-    },
+    },*/
     {
       "type": "font",
       "keyIcon": ""
     },
-    {
+    /*{
       "type": "cursor",
       "keyIcon": "󰆿"
-    },
+    },*/
     {
       "type": "terminal",
       "keyIcon": ""
     },
-    {
+    /*{
       "type": "terminalfont",
       "keyIcon": ""
-    },
+    },*/
     {
       "type": "cpu",
       "keyIcon": "",
@@ -224,7 +224,7 @@
       "hideType": "none",
       "percent": {
         "green": 50,
-        "yellow": 80,
+        "yellow": 75,
         "type": 0
       }
     },
@@ -233,20 +233,20 @@
       "keyIcon": "",
       "percent": {
         "green": 50,
-        "yellow": 80,
+        "yellow": 75,
         "type": 0
       }
     },
-    {
+    /*{
       "type": "swap",
       "percent": {
         "green": 50,
-        "yellow": 80,
+        "yellow": 75,
         "type": 0
       },
       "keyIcon": "󰓡",
       "separate": false
-    },
+    },*/
     {
       "type": "disk",
       "keyIcon": "",
@@ -262,11 +262,11 @@
       "useAvailable": false,
       "percent": {
         "green": 50,
-        "yellow": 80,
+        "yellow": 75,
         "type": 0
       }
     },
-    {
+    /*{
       "type": "localip",
       "keyIcon": "󰩟",
       "showIpv4": true,
@@ -281,7 +281,7 @@
       "defaultRouteOnly": true,
       "showAllIps": false,
       "namePrefix": ""
-    },
+    },*/
     {
       "type": "battery",
       "keyIcon": "",
@@ -292,14 +292,14 @@
         "type": 0
       }
     },
-    {
+    /*{
       "type": "poweradapter",
       "keyIcon": "󰚥"
-    },
-    {
+    },*/
+    /*{
       "type": "locale",
       "keyIcon": ""
-    },
+    },*/
     "break",
     {
       "type": "colors",
