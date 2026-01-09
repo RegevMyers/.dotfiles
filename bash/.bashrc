@@ -89,7 +89,7 @@ xterm*|rxvt*)
 esac
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -97,6 +97,7 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 for f in env aliases quiet xdg dotfiles utils; do
+  # TODO: use `local`
   _full_path="$XDG_CONFIG_HOME/bash/$f.sh";
   if [ -f "$_full_path" ]; then
     source "$_full_path"
@@ -115,9 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-quiet-bg sudo apt update 
-quiet-bg sudo apt autoremove
-
 function __sync_dotfiles {
   echo "[ @ ] Syncing dotfiles..."
   if quiet dotfiles sync; then
@@ -130,6 +128,13 @@ function __sync_dotfiles {
 }
 
 function __init {
+  # TODO: print success/failure
+  echo "[ @ ] Updating apt..."
+  quiet-bg sudo apt update 
+  quiet-bg sudo apt autoremove
+
+  eval "$(zoxide init bash)"
+
   __sync_dotfiles
 }
 
