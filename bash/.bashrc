@@ -133,10 +133,10 @@ function __init {
   quiet-bg sudo apt update 
   quiet-bg sudo apt autoremove
 
-  eval "$(zoxide init bash)"
-
   __sync_dotfiles
 }
+
+eval "$(zoxide init bash)"
 
 if [ -z "$TMUX" ]; then
   __init && exec tmux new -A -s tmux -n main -c $HOME 'echo; fastfetch; $SHELL'
