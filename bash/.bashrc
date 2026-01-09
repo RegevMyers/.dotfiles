@@ -129,7 +129,7 @@ function __sync_dotfiles {
 
 function __init {
   # TODO: print success/failure
-  echo "[ @ ] Updating apt..."
+  echo "[ & ] Updating apt..."
   quiet-bg sudo apt update 
   quiet-bg sudo apt autoremove
 
