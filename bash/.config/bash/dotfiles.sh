@@ -13,10 +13,10 @@ function dotfiles {
       __file="$3"
       __dir="$(dirname $__file)"
       
-      echo -e "[@] Creating $__dotfiles_dir/$__pkg/$__dir"
+      echo -e "[ @ ] Creating $__dotfiles_dir/$__pkg/$__dir"
       mkdir -p "$__dotfiles_dir/$__pkg/$__dir"
 
-      echo -e "[@] Moving $__file  ->  $__dotfiles_dir/$__pkg/$__dir"
+      echo -e "[ @ ] Moving $__file  ->  $__dotfiles_dir/$__pkg/$__dir"
       mv "$__file" "$__dotfiles_dir/$__pkg/$__dir"
 
       unset __pkg
@@ -27,7 +27,7 @@ function dotfiles {
     sync)
       cd $__dotfiles_dir 
       
-      echo "[@] Syncing with '$(git remote get-url origin)'"
+      echo "[ @ ] Syncing with '$(git remote get-url origin)'"
       
       quiet git add -A
       quiet git commit -a -m "Sync: $(date)" 
@@ -35,7 +35,7 @@ function dotfiles {
       quiet git push origin main
 
       if [ $? -ne 0 ]; then
-        echo "[!] Failed"
+        echo "[ ! ] Failed"
         return 1
       fi
       ;;
@@ -50,7 +50,7 @@ function dotfiles {
 
   # TODO: get rid of the cd
   cd $__dotfiles_dir
-  echo "[@] Stowing [ $(ls -d */ | sed 's|/||g' | tr '\n' ' ')]"
+  echo "[ @ ] Stowing [ $(ls -d */ | sed 's|/||g' | tr '\n' ' ')]"
   stow -S $(ls -d */ | sed 's|/||g' | tr '\n' ' ')
 
   cd $__orig_dir
