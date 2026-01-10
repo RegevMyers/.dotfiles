@@ -136,12 +136,9 @@ function __init_out {
   __sync_dotfiles
 }
 
-function __init_first {
-  eval "$(zoxide init bash)"
-  echo && fastfetch
-}
+eval "$(zoxide init bash)"
 
 if [ -z "$TMUX" ]; then
-  __init_out && exec tmux new -A -s tmux -n main -c $HOME '__init_first; $SHELL'
+  __init_out && exec tmux new -A -s tmux -n main -c $HOME 'echo && fastfetch && $SHELL'
 fi
 
