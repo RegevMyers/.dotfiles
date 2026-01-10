@@ -127,7 +127,7 @@ function __sync_dotfiles {
   fi
 }
 
-function __init {
+function __init_out {
   # TODO: print success/failure
   echo "[ & ] Updating apt repos..."
   quiet-bg sudo apt update 
@@ -136,9 +136,13 @@ function __init {
   __sync_dotfiles
 }
 
-eval "$(zoxide init bash)"
+
+function __init_first {
+  eval "$(zoxide init bash)"
+  echo && fastfetch
+}
 
 if [ -z "$TMUX" ]; then
-  __init && exec tmux new -A -s tmux -n main -c $HOME 'echo; fastfetch; $SHELL'
+  __init_out && exec tmux new -A -s tmux -n main -c $HOME '__init_first; $SHELL'
 fi
 
