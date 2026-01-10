@@ -138,7 +138,7 @@ function __init_out {
 
 eval "$(zoxide init bash)"
 
-alias screensaver='tmux popup -E -x 0% -y 0% -h 100% -w 100% "cbonsai --live --time=5 --life=50 --base=2 --leaf=\@,\$,\%,\&,\*,\?"'
+alias screensaver='tmux popup -E -x 0% -y 0% -h 100% -w 100% "cbonsai --live --time=5 --life=75 --base=2 --leaf=\@,\$,\%,\&,\*,\?"'
 
 if [ -z "$TMUX" ]; then
   __init_out && exec tmux new -A -s tmux -n main -c $HOME 'echo && fastfetch && $SHELL'
