@@ -136,7 +136,6 @@ function __init_out {
   __sync_dotfiles
 }
 
-
 function __init_first {
   eval "$(zoxide init bash)"
   echo && fastfetch
