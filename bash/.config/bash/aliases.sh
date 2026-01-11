@@ -1,9 +1,11 @@
 alias v='nvim'
-
 alias ff='fastfetch'
+
+alias minsh="PS1='\[\033[0m\]¢ '"
 
 alias c='clear'
 alias cf='clear; echo; fastfetch'
+alias cmsh="clear; minsh"
 
 alias ll='ls -AlFh'
 alias la='ls -A'
