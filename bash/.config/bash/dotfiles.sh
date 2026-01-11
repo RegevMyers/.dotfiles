@@ -4,7 +4,7 @@ function dotfiles {
 
   case "$1" in
     show)
-      tree --noreport -a -I .git .dotfiles
+      tree --noreport -a -I $HOME/.dotfiles/.git $HOME/.dotfiles
       return 0
       ;;
 
