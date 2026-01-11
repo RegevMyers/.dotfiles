@@ -1,7 +1,7 @@
 alias v='nvim'
 alias ff='fastfetch'
 
-alias minsh="PS1='\[\033[0m\]¢ '"
+alias minsh="unset PROMPT_COMMAND; PS1='\[\033[0m\]¢ '"
 
 alias c='clear'
 alias cf='clear; echo; fastfetch'
