@@ -5,7 +5,7 @@ alias minsh="unset PROMPT_COMMAND; PS1='\[\033[0m\]¢ '"
 
 alias c='clear'
 alias cf='clear; echo; fastfetch'
-alias cmsh="clear; minsh"
+alias cmsh="clear; minish"
 
 alias ll='ls -AlFh'
 alias la='ls -A'
@@ -18,10 +18,10 @@ if [ -x /usr/bin/dircolors ]; then
     alias ls='ls --color=auto'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
-
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
 
 alias agpl="curl https://www.gnu.org/licenses/agpl-3.0.txt -o LICENSE"
+
