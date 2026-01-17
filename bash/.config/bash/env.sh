@@ -11,4 +11,5 @@ export GIT_PS1_SHOWCONFLICTSTATE=1
 
 # zoxide
 export _ZO_RESOLVE_SYMLINKS=true
+export _ZO_DOCTOR=0
 

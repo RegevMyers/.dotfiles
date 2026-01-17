@@ -144,6 +144,7 @@ function __init_in {
     eval "$(fzf --bash)"
     eval "$(zoxide init bash)"
 }
+__init_in
 
 if [ -z "$TMUX" ]; then
   __init_out && exec tmux new -A -s tmux -n main -c $HOME 'echo && fastfetch && $SHELL'
