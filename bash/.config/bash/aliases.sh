@@ -25,3 +25,5 @@ fi
 
 alias agpl="curl https://www.gnu.org/licenses/agpl-3.0.txt -o LICENSE"
 
+alias screensaver='tmux popup -E -x 0% -y 0% -h 100% -w 100% "cbonsai --live --time=5 --life=75 --base=2 --leaf=\@,\$,\%,\&,\*,\?"'
+

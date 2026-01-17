@@ -127,18 +127,23 @@ function __sync_dotfiles {
   fi
 }
 
+### Inits
+
+## Init Out: One time, outside main shell 
 function __init_out {
   # TODO: print success/failure
   echo "[ & ] Updating apt repos..."
   quiet-bg sudo apt update 
-  quiet-bg sudo apt autoremove
+  quiet-bg sudo apt autoremove -y
 
   __sync_dotfiles
 }
 
-eval "$(zoxide init bash)"
-
-alias screensaver='tmux popup -E -x 0% -y 0% -h 100% -w 100% "cbonsai --live --time=5 --life=75 --base=2 --leaf=\@,\$,\%,\&,\*,\?"'
+## Init In: In every shell
+function __init_in {
+    eval "$(fzf --bash)"
+    eval "$(zoxide init bash)"
+}
 
 if [ -z "$TMUX" ]; then
   __init_out && exec tmux new -A -s tmux -n main -c $HOME 'echo && fastfetch && $SHELL'
