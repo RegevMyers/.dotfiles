@@ -23,7 +23,10 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-alias agpl="curl https://www.gnu.org/licenses/agpl-3.0.txt -o LICENSE"
+alias agpl='curl https://www.gnu.org/licenses/agpl-3.0.txt -o LICENSE'
 
 alias screensaver='tmux popup -E -x 0% -y 0% -h 100% -w 100% "cbonsai --live --time=5 --life=75 --base=2 --leaf=\@,\$,\%,\&,\*,\?"'
+
+alias poem='$HOME/repos/poem/poem.sh'
+alias cpoem='c; echo; poem; echo;'
 

@@ -141,7 +141,7 @@ function __init_out {
 
 ## Init In: In every shell
 function __init_in {
-    eval "$(fzf --bash)"
+    # eval "$(fzf --bash)"
     eval "$(zoxide init bash)"
 }
 __init_in
