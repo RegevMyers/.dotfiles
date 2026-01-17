@@ -1,9 +1,9 @@
 {
-    "format": "#T | #B - #A\n\n#C",
+    "format": "#T | #B \u001b[2m- #A\n\n#C",
     "style": {
         "default": "\u001b[0m",
-        "book":    "\u001b[3m",
-        "author":  "\u001b[3m",
+        "book":    "\u001b[2;3m",
+        "author":  "\u001b[2;3m",
         "title":   "\u001b[1m",
         "content": "\u001b[0m"
     }
