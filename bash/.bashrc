@@ -147,6 +147,6 @@ function __init_in {
 __init_in
 
 if [ -z "$TMUX" ]; then
-  __init_out && exec tmux new -A -s tmux -n main -c $HOME 'echo && fastfetch && $SHELL'
+  __init_out && exec tmux new -A -s tmux -n main -c $HOME 'echo && fastfetch && $SHELL || $SHELL --norc && PS1="[!] \w : "'
 fi
 
