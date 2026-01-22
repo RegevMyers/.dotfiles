@@ -117,7 +117,7 @@ if ! shopt -oq posix; then
 fi
 
 function __sync_dotfiles {
-  echo "[ @ ] Syncing dotfiles..."
+  echo "[ @ ] Syncing dotfiles"
   if quiet dotfiles sync; then
     echo "[ + ] Synced"
     return 0
@@ -132,7 +132,7 @@ function __sync_dotfiles {
 ## Init Out: One time, outside main shell 
 function __init_out {
   # TODO: print success/failure
-  echo "[ & ] Updating apt repos..."
+  echo "[ & ] Updating apt repos"
   quiet-bg sudo apt update 
   quiet-bg sudo apt autoremove -y
 
