@@ -149,6 +149,6 @@ __init_in
 if [ -z "$TMUX" ]; then
   __init_out
   echo "[ @ ] Starting tmux"
-  exec tmux new -A -s tmux -n main -c $HOME "$SHELL -c 'echo && fastfetch'"
+  exec tmux new -A -s tmux -n main -c $HOME "echo; fastfetch; $SHELL"
 fi
 
