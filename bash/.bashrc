@@ -152,3 +152,5 @@ if [ -z "$TMUX" ]; then
   exec tmux new -A -s tmux -n main -c $HOME "echo; fastfetch; $SHELL"
 fi
 
+
+[ -f "/home/regev/.ghcup/env" ] && . "/home/regev/.ghcup/env" # ghcup-env
