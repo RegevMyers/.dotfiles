@@ -24,6 +24,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 alias agpl='curl https://www.gnu.org/licenses/agpl-3.0.txt -o LICENSE'
+alias agplmd='curl https://raw.githubusercontent.com/IQAndreas/markdown-licenses/refs/heads/master/gnu-agpl-v3.0.md -o LICENSE.md'
 
 alias screensaver='tmux popup -E -x 0% -y 0% -h 100% -w 100% "cbonsai --live --time=5 --life=75 --base=2 --leaf=\@,\$,\%,\&,\*,\?"'
 
