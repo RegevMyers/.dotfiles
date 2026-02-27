@@ -30,7 +30,7 @@ function dotfiles {
       echo "[ @ ] Syncing with '$(git remote get-url origin)'"
       
       quiet git add -A
-      quiet git commit -a -m "Sync: $(date)" 
+      quiet git commit -a -m "Sync: $(date -u)" 
       quiet git pull --rebase origin main 
       quiet git push origin main
 
