@@ -1,6 +1,7 @@
-vim.opt.relativenumber = true
-vim.opt.statuscolumn = "%=%{(v:lnum==line('.'))?('=> '):(v:lnum)} "
-vim.api.nvim_set_hl(0, "LineNr", { fg = "#404040" })
+vim.wo.relativenumber = true
+vim.wo.number = true
+
+vim.api.nvim_set_hl(0, "LineNr", { fg = "blue" })
 
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
