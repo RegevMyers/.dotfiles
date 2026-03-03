@@ -32,7 +32,7 @@ function dotfiles {
       quiet git add -A
       
       __date="$(date -u)"
-      echo "  |---> Time: $__date"
+      echo "  |---> Commit Message: 'Sync: $__date'"
 
       quiet git commit -m "Sync: $__date" 
       quiet git pull --rebase origin main 
