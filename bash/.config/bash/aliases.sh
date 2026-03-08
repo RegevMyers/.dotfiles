@@ -1,4 +1,5 @@
 alias v='nvim'
+alias j='just'
 alias ff='fastfetch'
 
 alias minish="unset PROMPT_COMMAND; PS1='\[\033[0m\]¢ '"
