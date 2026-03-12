@@ -13,3 +13,6 @@ vim.keymap.set({'n', 'v'}, '<Down>', '<Nop>')
 vim.keymap.set({'n', 'v'}, '<Left>', '<Nop>')
 vim.keymap.set({'n', 'v'}, '<Right>', '<Nop>')
 
+vim.opt.laststatus = 0
+vim.opt.ruler = false
+
