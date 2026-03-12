@@ -31,3 +31,6 @@ alias screensaver='tmux popup -E -x 0% -y 0% -h 100% -w 100% "cbonsai --live --t
 alias poem='$HOME/repos/poem/poem.sh'
 alias cpoem='clear; poem'
 
+alias q='quiet'
+alias qbg='quiet-bg'
+
