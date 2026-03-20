@@ -1,6 +1,7 @@
 alias v='nvim'
 alias j='just'
 alias ff='fastfetch'
+alias t='tree --gitignore --noreport'
 
 alias minish="unset PROMPT_COMMAND; PS1='\[\033[0m\]¢ '"
 
@@ -10,9 +11,9 @@ alias cmsh="clear; minish"
 
 alias ll='ls -AlFh'
 alias la='ls -A'
-alias l='ls -CF'
 alias l1='ls -A1Fh'
 alias lh='ls -AlFhH'
+alias l='ls -CF'
 
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -32,5 +33,5 @@ alias poem='$HOME/repos/poem/poem.sh'
 alias cpoem='clear; poem'
 
 alias q='quiet'
-alias qbg='quiet-bg'
+alias q-bg='quiet-bg'
 
