@@ -27,7 +27,7 @@ fi
 
 alias agpl='curl https://raw.githubusercontent.com/IQAndreas/markdown-licenses/refs/heads/master/gnu-agpl-v3.0.md -o LICENSE.md'
 
-alias bonsai='cbonsai --live --time=5 --life=75 --multipier=7 --base=2 --leaf=\@,\$,\%,\&,\*,\?'
+alias bonsai='cbonsai --live --time=5 --multiplier=7 --base=2 --leaf=\@,\$,\%,\&,\*,\?'
 alias screensaver='tmux popup -E -x 0% -y 0% -h 100% -w 100% bonsai'
 
 alias poem='$HOME/repos/poem/poem.sh'
