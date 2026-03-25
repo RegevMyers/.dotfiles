@@ -1,7 +1,7 @@
 alias v='nvim'
 alias j='just'
 alias t='tree --gitignore --noreport'
-alias f='fdfind'
+alias f='fdfind --type file --type symlink --type block-device --type char-device --type socket --type pipe'
 
 alias minish="unset PROMPT_COMMAND; PS1='\[\033[0m\]¢ '"
 

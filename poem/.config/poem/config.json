@@ -1,10 +1,11 @@
 {
-    "format": "\n#T | #B \u001b[2m- #A\n\n#C\n",
+    "format": "#T | #B \u001b[2m- #A \u001b[2m(#R\u001b[2m)\n\n#C",
     "style": {
-        "default": "\u001b[0m",
-        "book":    "\u001b[2;3m",
-        "author":  "\u001b[2;3m",
-        "title":   "\u001b[1m",
-        "content": "\u001b[0m"
+        "default":    "\u001b[0m",
+        "book":       "\u001b[2;3m",
+        "author":     "\u001b[2;3m",
+        "translator": "\u001b[2;3m",
+        "title":      "\u001b[1m",
+        "content":    "\u001b[0m"
     }
 }
