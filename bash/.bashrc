@@ -61,10 +61,10 @@ function __pwd_git_ps1 {
     local top rel
     top=$(git rev-parse --show-toplevel)
     rel=${PWD#$top}
-    __git_ps1 "\[\033[0;33m\]$(basename "$top") \[\033[0;96m\]%s \[\033[0;34m\]${rel:-/}\[\033[0m\]"
+    __git_ps1 "\[\033[0;33m\]$(basename "$top") \[\033[0;96m\]%s \[\033[1;34m\]${rel:-/}\[\033[0m\]"
   else
     __pwd=${PWD//$HOME/\~}
-    echo -ne "\[\033[01;34m\]$__pwd\[\033[0m\]"
+    echo -ne "\[\033[1;34m\]$__pwd\[\033[0m\]"
     unset __pwd
   fi
 }
