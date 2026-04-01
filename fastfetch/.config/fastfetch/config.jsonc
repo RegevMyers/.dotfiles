@@ -119,6 +119,7 @@
     "dsForceDrm": false
   },
   "modules": [
+    /*
     {
       "type": "title",
       "key": " ",
@@ -130,12 +131,15 @@
         "host": ""
       }
     },
+    */
+    /*
     {
       "type": "separator",
       "string": "-",
       "outputColor": "",
       "times": 0
     },
+    */
     {
       "type": "os",
       "keyIcon": ""
@@ -168,13 +172,6 @@
       "type": "terminal",
       "keyIcon": ""
     },
-    /*{
-      "type": "display",
-      "keyIcon": "󰍹",
-      "compactType": "none",
-      "preciseRefreshRate": false,
-      "order": null
-    },*/
     {
       "type": "de",
       "keyIcon": "",
@@ -185,30 +182,10 @@
       "keyIcon": "",
       "detectPlugin": false
     },
-    /*{
-      "type": "wmtheme",
-      "keyIcon": "󰓸"
-    },*/
-    /*{
-      "type": "theme",
-      "keyIcon": "󰉼"
-    },*/
-    /*{
-      "type": "icons",
-      "keyIcon": ""
-    },*/
     {
       "type": "font",
       "keyIcon": ""
     },
-    /*{
-      "type": "cursor",
-      "keyIcon": "󰆿"
-    },*/
-    /*{
-      "type": "terminalfont",
-      "keyIcon": ""
-    },*/
     {
       "type": "cpu",
       "keyIcon": "",
@@ -237,16 +214,6 @@
         "type": 0
       }
     },
-    /*{
-      "type": "swap",
-      "percent": {
-        "green": 50,
-        "yellow": 75,
-        "type": 0
-      },
-      "keyIcon": "󰓡",
-      "separate": false
-    },*/
     {
       "type": "disk",
       "keyIcon": "",
@@ -266,22 +233,6 @@
         "type": 0
       }
     },
-    /*{
-      "type": "localip",
-      "keyIcon": "󰩟",
-      "showIpv4": true,
-      "showIpv6": false,
-      "showMac": false,
-      "showLoop": false,
-      "showPrefixLen": true,
-      "showMtu": false,
-      "showSpeed": false,
-      "showFlags": false,
-      "compact": false,
-      "defaultRouteOnly": true,
-      "showAllIps": false,
-      "namePrefix": ""
-    },*/
     {
       "type": "battery",
       "keyIcon": "",
@@ -292,14 +243,6 @@
         "type": 0
       }
     },
-    /*{
-      "type": "poweradapter",
-      "keyIcon": "󰚥"
-    },*/
-    /*{
-      "type": "locale",
-      "keyIcon": ""
-    },*/
     "break",
     {
       "type": "colors",
