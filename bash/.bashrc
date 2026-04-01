@@ -61,7 +61,7 @@ function __pwd_git_ps1 {
     local top rel
     top=$(git rev-parse --show-toplevel)
     rel=${PWD#$top}
-    __git_ps1 "\[\033[0;33m\]$(basename "$top") \[\033[0;96m\]%s \[\033[01;34m\]${rel:-/}\[\033[0m\]"
+    __git_ps1 "\[\033[0;33m\]$(basename "$top") \[\033[0;96m\]%s \[\033[0;34m\]${rel:-/}\[\033[0m\]"
   else
     __pwd=${PWD//$HOME/\~}
     echo -ne "\[\033[01;34m\]$__pwd\[\033[0m\]"
@@ -72,7 +72,7 @@ function __pwd_git_ps1 {
 if [ "$color_prompt" = yes ]; then
   PROMPT_COMMAND='
     __MY_GIT_PS1="$(__pwd_git_ps1)"
-    PS1="${debian_chroot:+($debian_chroot) }\[\033[0m\033[1;32m\]\u\[\033[0;32m\]@\h $__MY_GIT_PS1 \$ "
+    PS1="${debian_chroot:+($debian_chroot) }\[\033[0m\033[0;32m\]\u\[\033[2;3;32m\]@\h $__MY_GIT_PS1 \$ "
   '
 else 
   PS1='${debian_chroot:+($debian_chroot) }\u \w \[\033[0;33m\]$(__git_ps1 "%s ")\[033[00m\]\$ '
