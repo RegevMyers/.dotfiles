@@ -168,6 +168,7 @@
       "type": "terminal",
       "keyIcon": ""
     },
+    /*
     {
       "type": "de",
       "keyIcon": "",
@@ -178,6 +179,7 @@
       "keyIcon": "",
       "detectPlugin": false
     },
+    */
     {
       "type": "font",
       "keyIcon": ""
