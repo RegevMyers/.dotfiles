@@ -39,9 +39,9 @@
     "separator": ": ",
     "color": {
       "keys": "green",
-      "title": "blue",
+      "title": "",
       "output": "",
-      "separator": ""
+      "separator": "dim_white"
     },
     "brightColor": false,
     "duration": {
@@ -133,7 +133,7 @@
     {
       "type": "separator",
       "string": "-",
-      "outputColor": "",
+      "outputColor": "dim_white",
       "times": 0
     },
     {
