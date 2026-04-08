@@ -119,27 +119,23 @@
     "dsForceDrm": false
   },
   "modules": [
-    /*
     {
       "type": "title",
       "key": " ",
       "keyIcon": "",
       "fqdn": true,
       "color": {
-        "user": "",
-        "at": "",
-        "host": ""
+        "user": "green",
+        "at": "dim_green",
+        "host": "green"
       }
     },
-    */
-    /*
     {
       "type": "separator",
       "string": "-",
       "outputColor": "",
       "times": 0
     },
-    */
     {
       "type": "os",
       "keyIcon": ""
