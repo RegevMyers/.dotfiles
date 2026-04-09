@@ -1,24 +1,23 @@
 alias v='nvim'
 alias j='just'
-alias t='tree --gitignore --noreport'
+alias t='eza --all --git-ignore --tree'
 alias f='fdfind --hidden --type file --type symlink --type block-device --type char-device --type socket --type pipe'
 
 alias minish="unset PROMPT_COMMAND; PS1='\[\033[0m\]¢ '"
 
 alias c='clear'
-alias cf='clear; echo; fastfetch'
 alias cmsh="clear; minish"
+
+alias q='quiet'
+alias q-bg='quiet-bg'
+
+alias poem='$HOME/repos/poem/poem.sh'
 
 alias ll='ls -AlFh'
 alias la='ls -A'
 alias l1='ls -A1Fh'
 alias lh='ls -AlFhH'
 alias l='ls -CF'
-
-alias poem='$HOME/repos/poem/poem.sh'
-
-alias q='quiet'
-alias q-bg='quiet-bg'
 
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -29,5 +28,4 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
-
 
