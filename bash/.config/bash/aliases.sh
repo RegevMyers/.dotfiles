@@ -1,6 +1,6 @@
 alias v='nvim'
 alias j='just'
-alias t='eza $(pwd) --all --git-ignore --tree'
+alias t='eza "$PWD" --all --git-ignore --tree'
 alias f='fdfind --hidden --type file --type symlink --type block-device --type char-device --type socket --type pipe'
 
 alias minish="unset PROMPT_COMMAND; PS1='\[\033[0m\]¢ '"
