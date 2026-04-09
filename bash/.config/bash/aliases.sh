@@ -15,6 +15,11 @@ alias l1='ls -A1Fh'
 alias lh='ls -AlFhH'
 alias l='ls -CF'
 
+alias poem='$HOME/repos/poem/poem.sh'
+
+alias q='quiet'
+alias q-bg='quiet-bg'
+
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
@@ -25,13 +30,4 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-alias agpl='curl https://raw.githubusercontent.com/IQAndreas/markdown-licenses/refs/heads/master/gnu-agpl-v3.0.md -o LICENSE.md'
-
-# alias bonsai='cbonsai --live --time=5 --multiplier=7 --base=2 --leaf=\@,\$,\%,\&,\*,\?'
-# alias screensaver='tmux popup -x 0% -y 0% -h 100% -w 100% -E "cbonsai --live --time=5 --multiplier=7 --base=2 --leaf=\@,\$,\%,\&,\*,\?"'
-
-alias poem='$HOME/repos/poem/poem.sh'
-
-alias q='quiet'
-alias q-bg='quiet-bg'
 
