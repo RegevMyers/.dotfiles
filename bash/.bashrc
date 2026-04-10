@@ -151,8 +151,9 @@ __init_in
 if [ -z "$TMUX" ]; then
   __init_out
 
-  if [ -n "$SSH_TTY" ]; then
-    echo "[ @ ] SSH session - no tmux"
+  # TODO: find a better way to detect rpi-connect
+  if [ -n "$SSH_TTY" || "$(uname -n)" = *"-pi" ]; then
+    echo "[ i ] Remote session - no tmux"
     export PF_INFO='ascii title os host kernel uptime shell'
     clear; echo; pfetch
   else
