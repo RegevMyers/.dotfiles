@@ -156,11 +156,11 @@ if [ -z "$TMUX" ]; then
     echo "[ i ] Remote session - no tmux"
     export PF_INFO='ascii title os host kernel uptime shell'
     export FETCH='echo; pfetch'
-    clear; $FETCH
+    clear; eval "$FETCH"
   else
     echo "[ @ ] Starting tmux"
     export FETCH='echo; fastfetch'
-    exec tmux new -A -s tmux -n main -c $HOME "$FETCH; $SHELL"
+    exec tmux new -A -s tmux -n main -c $HOME "eval "$FETCH"; $SHELL"
   fi
 fi
 
