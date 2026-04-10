@@ -160,7 +160,7 @@ if [ -z "$TMUX" ]; then
   else
     echo "[ @ ] Starting tmux"
     alias fetch='echo; fastfetch'
-    exec tmux new -A -s tmux -n main -c $HOME "fetch; $SHELL"
+    exec tmux new -A -s tmux -n main -c $HOME "echo; fastfetch; $SHELL"
   fi
 fi
 
