@@ -11,6 +11,8 @@ alias cmsh="clear; minish"
 alias q='quiet'
 alias q-bg='quiet-bg'
 
+alias pi='ssh regev@10.0.0.16'
+
 alias poem='$HOME/repos/poem/poem.sh'
 
 alias ll='ls -AlFh'
