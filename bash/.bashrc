@@ -148,9 +148,14 @@ __init_in
 
 if [ -z "$TMUX" ]; then
   __init_out
-  echo "[ @ ] Starting tmux"
-  exec tmux new -A -s tmux -n main -c $HOME "echo; fastfetch; $SHELL"
-fi
 
+  if [ -n "$SSH_TTY" ]; then
+    echo "[ @ ] SSH session - no tmux"
+    clear; echo; fastfetch
+  else
+    echo "[ @ ] Starting tmux"
+    exec tmux new -A -s tmux -n main -c $HOME "echo; fastfetch; $SHELL"
+  fi
+fi
 
 [ -f "/home/regev/.ghcup/env" ] && . "/home/regev/.ghcup/env" # ghcup-env
