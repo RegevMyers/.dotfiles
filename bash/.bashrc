@@ -151,7 +151,7 @@ if [ -z "$TMUX" ]; then
 
   if [ -n "$SSH_TTY" ]; then
     echo "[ @ ] SSH session - no tmux"
-    clear; echo; fastfetch
+    clear; echo; fastfetch; echo
   else
     echo "[ @ ] Starting tmux"
     exec tmux new -A -s tmux -n main -c $HOME "echo; fastfetch; $SHELL"
