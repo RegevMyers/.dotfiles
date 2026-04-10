@@ -5,8 +5,6 @@ alias f='fdfind --hidden --type file --type symlink --type block-device --type c
 
 alias minish="unset PROMPT_COMMAND; PS1='\[\033[0m\]¢ '"
 
-alias fetch='eval "$FETCH"'
-
 alias c='clear'
 alias cmsh="clear; minish"
 
@@ -14,8 +12,6 @@ alias q='quiet'
 alias q-bg='quiet-bg'
 
 alias pi='ssh regev@10.0.0.16'
-
-alias tx='tmux new -A -s tmux -n main -c $HOME "eval "$FETCH"; $SHELL"'
 
 alias poem='$HOME/repos/poem/poem.sh'
 
