@@ -2,8 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-clear
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -133,6 +131,8 @@ function __sync_dotfiles {
 
 ## Init Out: One time, outside main shell 
 function __init_out {
+  clear
+
   # TODO: print success/failure
   echo "[ & ] Updating apt repos"
   quiet-bg sudo apt update 
