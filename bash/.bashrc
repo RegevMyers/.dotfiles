@@ -153,8 +153,8 @@ if [ -z "$TMUX" ]; then
 
   if [ -n "$SSH_TTY" ]; then
     echo "[ @ ] SSH session - no tmux"
-    export PF_INFO='ascii os host kernel uptime shell'
-    clear; echo; pfetch; echo
+    export PF_INFO='ascii title os host kernel uptime shell'
+    clear; echo; pfetch
   else
     echo "[ @ ] Starting tmux"
     exec tmux new -A -s tmux -n main -c $HOME "echo; fastfetch; $SHELL"
