@@ -1,9 +1,9 @@
 export C='/mnt/c'
 
+mkdir -p "$XDG_STATE_HOME/bash"
 export HISTFILE="$XDG_STATE_HOME/bash/history"
-touch $HISTFILE
-
 export HUSHLOGIN_FILE="$XDG_STATE_HOME/bash/hushlogin"
+touch $HISTFILE
 touch $HUSHLOGIN_FILE
 
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
