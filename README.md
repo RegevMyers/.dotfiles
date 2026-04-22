@@ -9,6 +9,5 @@ cd $HOME/.dotfiles
 mv $HOME/.bashrc $HOME/.bashrc.bak && mv $HOME/.profile $HOME/.profile.bak
 stow -S bash
 source $HOME/.bashrc
-dotfiles sync
 ```
 
