@@ -15,8 +15,6 @@ alias q-bg='quiet-bg'
 
 alias pi='ssh regev@10.0.0.16'
 
-alias poem='$HOME/repos/poem/poem.sh'
-
 alias ll='ls -AlFh'
 alias la='ls -A'
 alias l1='ls -A1Fh'
