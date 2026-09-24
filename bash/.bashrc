@@ -158,7 +158,7 @@ if [ -z "$TMUX" ]; then
     clear; echo; pfetch
   else
     echo "[ @ ] Starting tmux"
-    exec tmux new -A -s tmux -n main -c $HOME "echo; fastfetch; $SHELL"
+    exec tmux new -A -s tmux -n main -c $HOME "echo; fastfetch; echo; poem --book 'Dao De Jing'; $SHELL"
   fi
 fi
 
