@@ -145,6 +145,8 @@ function __init_out {
 function __init_in {
     # eval "$(fzf --bash)"
     eval "$(zoxide init bash)"
+
+    [ -f "/home/regev/.ghcup/env" ] && . "/home/regev/.ghcup/env" # ghcup-env
 }
 __init_in
 
@@ -162,4 +164,4 @@ if [ -z "$TMUX" ]; then
   fi
 fi
 
-[ -f "/home/regev/.ghcup/env" ] && . "/home/regev/.ghcup/env" # ghcup-env
+
