@@ -10,11 +10,6 @@ alias minish="unset PROMPT_COMMAND; PS1='\[\033[0m\]¢ '"
 alias c='clear'
 alias cmsh="clear; minish"
 
-alias q='quiet'
-alias q-bg='quiet-bg'
-
-alias pi='ssh regev@10.0.0.16'
-
 alias ll='ls -AlFh'
 alias la='ls -A'
 alias l1='ls -A1Fh'
