@@ -72,10 +72,10 @@ function __pwd_git_ps1 {
 if [ "$color_prompt" = yes ]; then
   PROMPT_COMMAND='
     __MY_GIT_PS1="$(__pwd_git_ps1)"
-    PS1="${debian_chroot:+($debian_chroot) }\[\033[0m\033[0;32m\]\u\[\033[2;3;32m\]@\h\[\033[0m\] $__MY_GIT_PS1 \$ "
+    PS1="${debian_chroot:+($debian_chroot) }\[\033[0m\033[0;32m\]\u\[\033[2;3;32m\]@\h\[\033[0m\] $__MY_GIT_PS1 ${VIRTUAL_ENV:+(venv) }\$ "
   '
 else 
-  PS1='${debian_chroot:+($debian_chroot) }\u \w \[\033[0;33m\]$(__git_ps1 "%s ")\[033[00m\]\$ '
+  PS1='${debian_chroot:+($debian_chroot) }\u \w \[\033[0;33m\]$(__git_ps1 "%s ")\[033[00m\] ${VIRTUAL_ENV:+(venv) }\$ '
 fi
 unset color_prompt force_color_prompt
 
