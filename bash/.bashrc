@@ -165,3 +165,5 @@ if [ -z "$TMUX" ]; then
 fi
 
 
+
+. "$HOME/.local/share/../bin/env"
