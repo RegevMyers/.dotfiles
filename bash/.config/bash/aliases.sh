@@ -2,6 +2,7 @@ alias v='nvim'
 alias j='just'
 alias t='eza --all --git-ignore --tree'
 alias f='fd --hidden --type file --type symlink'
+alias d='dict -d wn'
 
 alias fd='fdfind'
 
