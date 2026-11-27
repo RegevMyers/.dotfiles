@@ -63,7 +63,7 @@ function __pwd_git_ps1 {
     rel=${PWD#$top}
     __git_ps1 "\[\033[0;33m\]$(basename "$top") \[\033[0;96m\]%s \[\033[1;34m\]${rel:-/}\[\033[0m\]"
   else
-    __pwd=${PWD//$HOME/\~}
+    __pwd=${PWD/#$HOME/\~}
     echo -ne "\[\033[1;34m\]$__pwd\[\033[0m\]"
     unset __pwd
   fi
