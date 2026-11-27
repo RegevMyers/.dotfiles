@@ -98,7 +98,6 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 for f in aliases.sh dotfiles.sh; do
   __full_path="$XDG_CONFIG_HOME/bash/$f"
-  echo $__full_path
   if [ -r $__full_path ]; then
     source "$__full_path"
   fi
