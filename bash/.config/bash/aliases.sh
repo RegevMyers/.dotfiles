@@ -1,6 +1,6 @@
 alias v='nvim'
 alias j='just'
-alias t='eza --tree --all --git-ignore --color=auto'
+alias t='eza --tree --all --git-ignore'
 alias f='fd --hidden --follow --type file --type symlink'
 alias d='dict -d wn'
 
@@ -26,6 +26,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
+    alias eza='eza --color=auto'
 fi
 
 alias agpl='curl https://raw.githubusercontent.com/IQAndreas/markdown-licenses/refs/heads/master/gnu-agpl-v3.0.md -o LICENSE.md'
