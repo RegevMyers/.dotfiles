@@ -101,9 +101,23 @@ for f in aliases.sh dotfiles.sh; do
   [ -r "$__full_path" ] | source "$_full_path"
 done
 
-for e in $XDG_CONFIG_HOME/bash/env.d; do source e done
+__env_d="$XDG_CONFIG_HOME/bash/env.d"
+if [ -d $__env_d ]; then
+  for e in $__env_d; do
+    source e
+  done
+fi
 
-for u in $XDG_CONFIG_HOME/bash/utils.d; do source u done
+__utils_d="$XDG_CONFIG_HOME/bash/env.d"
+if [ -d $__utils_d ]; then
+  for e in $__utils_d; do
+    source e
+  done
+fi
+
+for u in $XDG_CONFIG_HOME/bash/utils.d; do
+  source u
+done
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
