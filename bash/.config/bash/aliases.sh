@@ -1,6 +1,6 @@
 alias v='nvim'
 alias j='just'
-alias t='tree --gitignore -l'
+alias t='eza --tree --all --git-ignore --color=auto'
 alias f='fd --hidden --follow --type file --type symlink'
 alias d='dict -d wn'
 
