@@ -10,9 +10,9 @@ function dotfiles {
 
     add)
       __pkg="$2"
-      __file="$3"
-      __dir="$(dirname $__file)"
-      
+      __file="$(realpath $3)"
+      __dir="$(dirname $__file | sed "s|$HOME/||")"
+
       echo -e "[ @ ] Creating $__dotfiles_dir/$__pkg/$__dir"
       mkdir -p "$__dotfiles_dir/$__pkg/$__dir"
 
