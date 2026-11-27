@@ -1,7 +1,7 @@
 alias v='nvim'
 alias j='just'
-alias t='eza --all --git-ignore --tree'
-alias f='fd --hidden --type file --type symlink'
+alias t='tree --gitignore -l'
+alias f='fd --hidden --follow --type file --type symlink'
 alias d='dict -d wn'
 
 alias fd='fdfind'
@@ -11,6 +11,7 @@ alias minish="unset PROMPT_COMMAND; PS1='\[\033[0m\]¢ '"
 alias c='clear'
 alias cmsh="clear; minish"
 
+# TODO: replace with eza
 alias ll='ls -AlFh'
 alias la='ls -A'
 alias l1='ls -A1Fh'
