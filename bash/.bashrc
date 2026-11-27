@@ -108,7 +108,7 @@ if [ -d $__env_d ]; then
   done
 fi
 
-__utils_d="$XDG_CONFIG_HOME/bash/env.d"
+__utils_d="$XDG_CONFIG_HOME/bash/utils.d"
 if [ -d $__utils_d ]; then
   for u in $__utils_d; do
     source $u
