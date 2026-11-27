@@ -98,7 +98,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 for f in aliases.sh dotfiles.sh; do
   __full_path="$XDG_CONFIG_HOME/bash/$f"
-  [ -r "$__full_path" ] | source "$_full_path"
+  [ -r "$__full_path" ] | echo $full_path; source "$_full_path"
 done
 
 __env_d="$XDG_CONFIG_HOME/bash/env.d"
@@ -114,10 +114,6 @@ if [ -d $__utils_d ]; then
     source $u
   done
 fi
-
-for u in $XDG_CONFIG_HOME/bash/utils.d; do
-  source u
-done
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
