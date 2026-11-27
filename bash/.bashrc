@@ -96,14 +96,14 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-for f in env aliases quiet xdg dotfiles utils; do
-  # TODO: use `local`
-  _full_path="$XDG_CONFIG_HOME/bash/$f.sh";
-  if [ -f "$_full_path" ]; then
-    source "$_full_path"
-  fi
+for f in aliases.sh dotfiles.sh; do
+  __full_path="$XDG_CONFIG_HOME/bash/$f"
+  [ -r "$__full_path" ] | source "$_full_path"
 done
-unset _full_path
+
+for e in $XDG_CONFIG_HOME/bash/env.d; do source e done
+
+for u in $XDG_CONFIG_HOME/bash/utils.d; do source u done
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
