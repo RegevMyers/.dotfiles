@@ -5,3 +5,4 @@ function quiet {
 function quiet-bg {
   ("$@" &> /dev/null &)
 }
+
