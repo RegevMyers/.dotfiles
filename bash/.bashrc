@@ -104,14 +104,14 @@ done
 __env_d="$XDG_CONFIG_HOME/bash/env.d"
 if [ -d $__env_d ]; then
   for e in $__env_d; do
-    source e
+    source $e
   done
 fi
 
 __utils_d="$XDG_CONFIG_HOME/bash/env.d"
 if [ -d $__utils_d ]; then
-  for e in $__utils_d; do
-    source e
+  for u in $__utils_d; do
+    source $u
   done
 fi
 
